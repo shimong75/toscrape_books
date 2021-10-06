@@ -31,5 +31,5 @@ jobs:
         run: |
           echo ${{secrets.DOCKER_USERNAME}}
           docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
-          docker build -t to_scrape:$GITHUB_SHA .
+          docker build -t shimoncv/to_scrape:$GITHUB_SHA .
           docker push shimoncv/to_scrape:$GITHUB_SHA
